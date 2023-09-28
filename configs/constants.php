@@ -2,5 +2,5 @@
     $servername = "localhost";
     $username = "root";
     $password = "";
-    $dbname = "authordb";
+    $dbname = "assignment2";
 ?>
