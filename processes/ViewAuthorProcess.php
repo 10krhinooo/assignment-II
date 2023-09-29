@@ -7,7 +7,7 @@ class ViewAuthor{
             // Initialize the database connection
             $pdo = new PDO("mysql:host=localhost;dbname=assignment2", "root", "");
 
-            $query = $pdo->prepare( "SELECT U_name, U_email, Address, DOB FROM users");
+            $query = "SELECT U_name, U_email, Address, DOB FROM users";
             $stmt = $pdo->query($query);
 
             echo "<h1>User Data</h1>";
