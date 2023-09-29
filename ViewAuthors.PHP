@@ -1,6 +1,7 @@
 <?php
-require_once 'configs/dbConn.php';
-
+require_once 'objects.php';
+$OBJ_viewAuthors ->author();
+?>
 
 
 
@@ -9,29 +10,7 @@ require_once 'configs/dbConn.php';
 
     
   
-try {
-    $query = "SELECT U_name, U_email, Address, DOB FROM users";
-    $stmt = $pdo->query($query);
-    
-   
-    echo "<h1>User Data</h1>";
-    echo "<table border='1'>";
-    echo "<tr><th>Name</th><th>Email</th><th>Address</th><th>DOB</th></tr>";
-    
-    while ($row = $stmt->fetch(PDO::FETCH_ASSOC)) {
-        echo "<tr>";
-        echo "<td>" . $row['U_name'] . "</td>";
-        echo "<td>" . $row['U_email'] . "</td>";
-        echo "<td>" . $row['Address'] . "</td>";
-        echo "<td>" . $row['DOB'] . "</td>";
-        echo "</tr>";
-    }
-    
-    echo "</table>";
-} catch (PDOException $e) {
-    echo "Error: " . $e->getMessage();
-}
-?>
+
 
     
     
